@@ -21,11 +21,14 @@ class GameController {
     }
 
     reset() {
-        console.log('game reseted');
-        this.loadCards();
-        this.currentJudge = null;
+        this.players = [];
+        this.nextPlayers = [];
+        this.blackCards = [];
+        this.whiteCards = [];
         this.currentRound = 1;
+        this.currentJudge = null;
         this.cardsSelected = [];
+        this.loadCards();
     }
 
     // Agregar un jugador al juego
